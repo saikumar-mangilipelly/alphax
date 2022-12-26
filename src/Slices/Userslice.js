@@ -3,9 +3,11 @@ import axios from 'axios'
 export const userlogin=createAsyncThunk('loginuser',async(loginuserdata,thunkapi)=>{
     let response=await axios.post('/user/login',loginuserdata)
     if(response.data.message==='Invalid User' || response.data.message==='Invalid password'){
+        alert(response.data.message)
         return thunkapi.rejectWithValue(response.data)
     }
     else{
+        alert(response.data.message)
         localStorage.setItem("token",response.data.payload)
         return response.data.userobj
     }
