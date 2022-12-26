@@ -1,0 +1,41 @@
+.fcard{
+    margin-top: 90px;
+    width: 450px;
+    padding: 30px;
+    border: 0.5px solid #878787ae;
+    box-shadow: 0px 4px 64px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+@media screen and (max-width:480px){
+    .fcard{
+        margin-top: 160px;
+        width: 350px;
+    }
+}
+.fbtn{
+    width: 100%;
+    padding: 10px;
+}
+.edplace{
+    padding: 12px;
+}
+.edplace::placeholder{
+    font-weight: lighter;
+    font-size: small;
+}
+.fimage{
+    margin-top: 180px;
+}
+.flabels{
+    font-size: 16px;
+    font-weight: bold;
+}
+.item1,.item3{
+    margin-top: 80px;
+}
+.item2{
+    margin-top: 40px;
+}
+.forgot{
+    margin-top: 70px;
+}
