@@ -60,3 +60,11 @@
 .dl:hover{
     color: black;
 }
+.passicon-toggle{
+    font-size: 25px;
+    margin-top: -45px;
+    position: absolute;
+    right: 2.5rem;
+    z-index: 1000;
+    cursor: pointer;
+}

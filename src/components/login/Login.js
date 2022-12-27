@@ -1,15 +1,19 @@
-import React from 'react'
 import './Login.css'
 import signin from '../../assests/signin.svg'
+import {useState} from 'react'
 import {useForm} from 'react-hook-form'
 import { useDispatch,useSelector } from 'react-redux'
 import { Link,Navigate} from 'react-router-dom'
 import { userlogin } from '../../Slices/Userslice'
+import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 function Login() {
+  const [visibility,setvisibility]=useState(false)
   const {register,handleSubmit,formState:{errors}}=useForm()
   let {issuccess} = useSelector(state => state.user)
+  const passwordfunction=()=>{
+    setvisibility(!visibility)
+  }
   let dispatch=useDispatch()
-  
   const onsubmit=(loginuserdata)=>{
     dispatch(userlogin(loginuserdata))
   }
@@ -25,11 +29,12 @@ function Login() {
               <h2 className='mt-4 fw-bold'>Sign in</h2>
               <p>Lorem ipsum dolor sit.</p>
               <label htmlFor="user" className='form-label mt-3 loglabels'>User Name</label>
-              <input type="text" id='user' placeholder='Enter your Username' className='edplace form-control' {...register("username",{required:true})}/>
+              <input type="text" id='user' placeholder='Enter your Username' autoComplete='username' className='edplace form-control' {...register("username",{required:true})}/>
               {errors.username?.type === 'required' && <p className='etag'>* username required</p>}
 
               <label htmlFor="pass" className='form-label mt-3 loglabels'>Password</label>
-              <input type="password" id='pass' className='form-control edplace' placeholder='Enter your Password' {...register("password",{required:true})}/>
+              <input type={visibility ? "text" : "password"} id='pass' className='form-control edplace' autoComplete='current-password' placeholder='Enter your Password' {...register("password",{required:true})}/>
+              <i className='passicon-toggle' onClick={passwordfunction}>{visibility?<AiFillEyeInvisible/>:<AiFillEye/>}</i>
               {errors.password?.type === 'required' && <p className='etag'>* password required</p>}
 
               <div className='cbox mt-3'>

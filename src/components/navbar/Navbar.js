@@ -1,4 +1,3 @@
-import React from 'react'
 import Signup from '../signup/Signup';
 import Signin from '../login/Login';
 import Forgotpass from '../forgotpass/Forgotpass'
@@ -48,10 +47,10 @@ function Navbar() {
                                     <NavLink className="nav-link active navhead" aria-current="page" to='/'>SignUp</NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <NavLink className="nav-link navhead" to='signin'>SignIn</NavLink>
+                                    <NavLink className="nav-link navhead" to='/signin'>SignIn</NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <NavLink className="nav-link navhead" to='dashboard'>Dashboard</NavLink>
+                                    <NavLink className="nav-link navhead" to='/dashboard'>Dashboard</NavLink>
                                 </li>
                             </ul>
                         </div>}
