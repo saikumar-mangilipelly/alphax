@@ -61,7 +61,7 @@ function Signup() {
               {errors.cpassword?.type === 'required' && <p className='setag'>* confirm Password</p>}
 
               <button type='submit' className='btn btn-dark signupbtn mt-4'>Register</button>
-              <p className='text-center mt-4 mb-0'>Don't have an Account ? <Link to='/signin'
+              <p className='text-center mt-4 mb-0'>Already have an Account ? <Link to='/signin'
                 className="dl">Login</Link></p>
             </form>
           </div>

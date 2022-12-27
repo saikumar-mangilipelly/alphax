@@ -49,9 +49,6 @@ function Navbar() {
                                 <li className="nav-item">
                                     <NavLink className="nav-link navhead" to='/signin'>SignIn</NavLink>
                                 </li>
-                                <li className="nav-item">
-                                    <NavLink className="nav-link navhead" to='/dashboard'>Dashboard</NavLink>
-                                </li>
                             </ul>
                         </div>}
                 </div>
